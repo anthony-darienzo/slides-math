@@ -1,0 +1,106 @@
+\documentclass{./slides-math}
+
+\title{\textsl{Title}}
+\subtitle{\emph{Subtitle}}
+\author{Author Name}
+\institute{Institute}
+\date{\today}
+
+\maincolor{ThesisSage}
+\accentcolor{ThesisSage!80!black}
+
+\begin{document}
+
+%\maketitle
+
+\makebottomtitle
+
+\begin{frame}{Test}
+  A new frame
+  \begin{example}
+    An example.
+  \end{example}
+
+  \alert{An alert.}
+\end{frame}
+
+\begin{frame}{Another slide}
+  \begin{block}{Equation}
+    \[%
+      \int_0^\infty x^n e^{-x} \, dx  = n!
+    \]%
+  \end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Custom characters}
+  \begin{block}{Diagrams}
+    \[%
+      \begin{tikzcd}
+        A \arrow[r,xkcd] & B
+      \end{tikzcd}
+    \]%
+  \end{block}
+  \pause%
+  \begin{block}{Yoneda Lemma}
+    \[%
+      F(X) \cong \hw{C}\pwrap{\Yo(X),F}.
+    \]%
+  \end{block}
+\end{frame}
+
+\begin{frame}{Lists}
+  \begin{enumerate}[<+->]
+  \item First
+  \item Second
+  \item Third
+  \end{enumerate}
+  \begin{itemize}[<+->]
+  \item First
+  \item Second
+  \item Third
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Pop-ups}
+  Testing a tcolorbox popup.
+  \begin{overlayarea}{\textwidth}{0.5\textheight}
+    \begin{enumerate}[<+->]
+    \item Here
+    \item are
+    \item some
+    \item enumerate items.
+    \item \begin{Piton}
+print("Hello")
+    \end{Piton}
+    \end{enumerate}
+  \end{overlayarea}
+
+  \begin{smpopupbox}{3cm}{xshift=-1cm,yshift=1cm}<2->
+    Here is a pop up!
+  \end{smpopupbox}
+\end{frame}
+
+\begin{frame}[fragile]{New pop ups}
+  \begin{smpopupbox}{6cm}{xshift=-1cm,yshift=1cm}<1>
+    This is a test!
+  \end{smpopupbox}
+  \pause%
+  Here is some text
+  \pause%
+  \begin{smpopupbox}{6cm}{xshift=2cm}<3>
+    \begin{Piton}
+print("Hello world")
+    \end{Piton}
+  \end{smpopupbox}
+\end{frame}
+
+\begin{frame}[standout]
+  Thank you!
+\end{frame}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: LaTeX
+%%% TeX-master: t
+%%% End:
