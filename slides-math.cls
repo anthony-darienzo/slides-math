@@ -88,8 +88,10 @@
 %%% FONTS %%%
 
 \RequirePackage{unicode-math}
-% \RequirePackage[frenchmath,italic,nosmalldelims]{mathastext}%
-\setmathfont{Fira Math}
+\setmathfont{IBM Plex Math}
+\setmathfont{STIXTwoMath-Regular.otf}[StylisticSet=1]
+\setmathfont{STIXTwoMath-Regular.otf}[range={cal, bfcal}, StylisticSet=0]
+\setmathfont[range={sfup, sfit}]{Fira Math}
 
 %%% Any page modifications for FONTS go here
 
