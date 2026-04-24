@@ -1,0 +1,12 @@
+\frametitle{New pop ups}
+\begin{smpopupbox}{6cm}{xshift=-1cm,yshift=1cm}<1>
+    This is a test!
+  \end{smpopupbox}
+  \pause%
+  Here is some text
+  \pause%
+  \begin{smpopupbox}{6cm}{xshift=2cm}<3>
+    \begin{Piton}
+print("Hello world")
+    \end{Piton}
+  \end{smpopupbox}

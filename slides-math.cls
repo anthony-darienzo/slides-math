@@ -2,6 +2,9 @@
 % Originally based on my homework-math and thesis-note classes.
 \ProvidesClass{slides-math}[2026/03/16 Personal math beamer class]
 
+\RequirePackage{iftex}
+\RequireLuaTeX% Force user to use LuaLatex.
+
 %%% DEFAULTS %%%
 \def\@true{1}
 \def\@false{0}
@@ -45,8 +48,6 @@
 ]{moloch}
 
 %%% DEPENDENCIES %%%
-\RequirePackage{iftex}
-\RequireLuaTeX% Force user to use LuaLatex.
 
 \RequirePackage{pgfopts}
 \RequirePackage{etoolbox}% 
@@ -182,6 +183,10 @@
 % Style itemize and enumerate
 \setbeamertemplate{enumerate item} {\@smNumberBox{\insertenumlabel}}
 \setbeamertemplate{itemize item} {\@smEmptyBox}
+
+% Style footnotes and remove icons from beamer bibliography
+\setbeamerfont{footnote}{size=\tiny}
+\setbeamertemplate{bibliography item}{\insertbiblabel}
 
 %%% Any page modifications for DOCUMENT SETUP.setup go here
 % tikz magic from:

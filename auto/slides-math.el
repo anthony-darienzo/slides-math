@@ -8,18 +8,18 @@
    (TeX-add-to-alist 'LaTeX-provided-package-options
                      '(("fourier" "") ("mathastext" "frenchmath" "italic" "nosmalldelims") ("enumitem" "") ("iftex" "") ("pgfopts" "") ("etoolbox" "") ("graphicx" "") ("scalerel" "") ("tikz" "") ("tikz-cd" "") ("tikz-3dplot" "") ("mathtools" "") ("amsthm" "") ("amsmath" "") ("amssymb" "") ("gensymb" "") ("faktor" "") ("stackengine" "") ("hyperref" "") ("extdash" "shortcuts") ("setspace" "") ("xcolor" "") ("tcolorbox" "" "most") ("piton" "") ("soul" "") ("titlesec" "explicit") ("plex-otf" "") ("datetime" "long" "nodayofweek" "24hr") ("unicode-math" "" "mathrm=sym")))
    (add-to-list 'LaTeX-verbatim-environments-local "semiverbatim")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "href")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperimage")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperbaseurl")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "nolinkurl")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "path")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "nolinkurl")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperbaseurl")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperimage")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "href")
    (add-to-list 'LaTeX-verbatim-macros-with-delims-local "path")
    (TeX-run-style-hooks
     "latex2e"
+    "iftex"
     "beamer"
     "beamer10"
-    "iftex"
     "pgfopts"
     "etoolbox"
     "graphicx"
@@ -69,6 +69,13 @@
     "eqdef"
     "equivdef"
     "id"
+    "Dom"
+    "dom"
+    "Range"
+    "Hom"
+    "Sub"
+    "Yo"
+    "coYo"
     "pcal"
     "actson"
     "ep"
@@ -88,9 +95,9 @@
     "xkcdleftarrow"
     "xkcdmapsto")
    (LaTeX-add-environments
-    '("comment_box" LaTeX-env-args ["argument"] 0)
-    '("colored_box*" LaTeX-env-args ["argument"] 0)
-    '("colored_box" LaTeX-env-args ["argument"] 1)
+    '("commentbox" LaTeX-env-args ["argument"] 0)
+    '("coloredbox*" LaTeX-env-args ["argument"] 0)
+    '("coloredbox" LaTeX-env-args ["argument"] 1)
     '("last_exercise" LaTeX-env-args ["argument"] 0)
     '("centered-exercise-like" LaTeX-env-args ["argument"] 2)
     '("exercise-like" LaTeX-env-args ["argument"] 1)

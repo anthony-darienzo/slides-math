@@ -9,6 +9,9 @@
 \maincolor{ThesisSage}
 \accentcolor{ThesisSage!80!black}
 
+\usepackage[backend=biber]{biblatex}
+\addbibresource{refs.bib}
+
 \begin{document}
 
 %\maketitle
@@ -18,10 +21,11 @@
 \begin{frame}{Test}
   A new frame
   \begin{example}
-    An example.
+    An example.\footnote[frame]{Here is a footnote.}
   \end{example}
 
-  \alert{An alert.}
+  \alert{An
+    alert.}\footnote[frame]{\fullcite{melroseAtiyahPatodiSingerIndexTheorem1993}}
 \end{frame}
 
 \begin{frame}{Another slide}
@@ -57,7 +61,7 @@
     \]%
   \end{block}
   \pause%
-  \begin{block}{Yoneda Lemma}
+  \begin{block}{Yoneda Lemma\footnote{Block footnotes appear in frame}}
     \[%
       F(X) \cong \hw{C}\pwrap{\Yo(X),F}.
     \]%
@@ -112,6 +116,10 @@ print("Hello world")
 
 \begin{frame}[standout]
   Thank you!
+\end{frame}
+
+\begin{frame}[allowframebreaks]{References}
+  \printbibliography[heading=none]
 \end{frame}
 
 \end{document}
